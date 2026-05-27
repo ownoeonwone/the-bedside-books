@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 280" role="img" aria-label="The Bedside Books">
-  <g fill="none" stroke="#2A2520" stroke-width="2">
-    <line x1="120" y1="95" x2="520" y2="95"/>
-    <line x1="880" y1="95" x2="1280" y2="95"/>
-    <line x1="120" y1="190" x2="520" y2="190"/>
-    <line x1="880" y1="190" x2="1280" y2="190"/>
+  <g stroke="#2A2520" stroke-width="2" fill="none" stroke-linecap="round">
+    <line x1="80" y1="70" x2="1320" y2="70"/>
+    <line x1="80" y1="220" x2="1320" y2="220"/>
   </g>
-  <circle cx="700" cy="95" r="4" fill="#2A2520"/>
-  <circle cx="700" cy="190" r="4" fill="#2A2520"/>
-  <text x="700" y="165" text-anchor="middle"
+  <g fill="#2A2520">
+    <circle cx="700" cy="70" r="3.5"/>
+    <circle cx="700" cy="220" r="3.5"/>
+  </g>
+  <text x="700" y="172" text-anchor="middle"
     font-family="'EB Garamond', Garamond, Baskerville, serif"
-    font-size="80" fill="#2A2520" letter-spacing="1">
+    font-size="86" fill="#2A2520" letter-spacing="1">
     <tspan font-style="italic">The</tspan>
-    <tspan dx="22">Bedside Books</tspan>
+    <tspan dx="20">Bedside Books</tspan>
   </text>
 </svg>

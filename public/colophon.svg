@@ -1,13 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-label="The Bedside Books colophon">
-  <g fill="none" stroke="#2A2520">
-    <ellipse cx="250" cy="340" rx="120" ry="220" stroke-width="4"/>
-    <ellipse cx="250" cy="340" rx="102" ry="202" stroke-width="1.5"/>
-    <rect x="200" y="390" width="100" height="18" stroke-width="2"/>
-    <rect x="188" y="408" width="124" height="18" stroke-width="2"/>
-    <path d="M220 385 Q250 300 280 385" stroke-width="3"/>
-    <path d="M225 300 L275 300 L290 385 L210 385 Z" stroke-width="3"/>
-    <line x1="250" y1="300" x2="250" y2="220" stroke-width="3"/>
-    <ellipse cx="250" cy="205" rx="26" ry="18" stroke-width="3"/>
+  <g stroke="#2A2520" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="250" cy="380" rx="135" ry="245" stroke-width="3"/>
+    <ellipse cx="250" cy="380" rx="120" ry="228" stroke-width="1"/>
   </g>
-  <path d="M238 205 Q250 170 262 205" fill="#2A2520"/>
+  <g fill="#2A2520">
+    <circle cx="250" cy="135" r="5"/>
+    <circle cx="250" cy="625" r="5"/>
+  </g>
+
+  <g stroke="#2A2520" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="185" y="500" width="130" height="18"/>
+    <rect x="195" y="482" width="110" height="18"/>
+    <rect x="205" y="464" width="90" height="18"/>
+  </g>
+
+  <g stroke="#2A2520" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 200 440 Q 200 415 250 408 Q 300 415 300 440 Q 300 458 250 462 Q 200 458 200 440 Z"/>
+    <rect x="240" y="385" width="20" height="22"/>
+  </g>
+  <path d="M 245 388 Q 250 360 255 388 Q 254 370 250 360 Q 246 370 245 388 Z" fill="#2A2520"/>
 </svg>
