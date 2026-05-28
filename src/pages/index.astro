@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 import SubstackEmbed from "../components/SubstackEmbed.astro";
 
 import cover from "../assets/the-truth-about-the-puppy-cover.png";
-import spread6 from "../assets/spread-6-puppy-at-window.png";
+import spread7 from "../assets/spread-7-dad-and-adult-penny.png";
 import spread9 from "../assets/spread-9-dad-and-elder-penny.png";
 import spread10 from "../assets/spread-10-planting-tree.png";
 ---
@@ -59,18 +59,10 @@ import spread10 from "../assets/spread-10-planting-tree.png";
         />
       </div>
 
+      <!-- Title, subtitle, byline, and imprint mark are baked into the cover
+           image, so we skip them here and go straight to the verse. -->
       <div class="container-prose">
-        <h1 class="mt-12 sm:mt-16 text-4xl sm:text-5xl leading-[1.15]">
-          The Truth About the Puppy
-        </h1>
-        <p class="mt-3 text-lg sm:text-xl italic" style="color: color-mix(in srgb, var(--color-ink) 75%, transparent);">
-          an honest picture book for begging children and tired parents
-        </p>
-        <p class="mt-4 text-base sm:text-lg">
-          by Dr. Jay
-        </p>
-
-        <figure class="mt-12 sm:mt-14 mx-auto max-w-[30rem]">
+        <figure class="mt-14 sm:mt-20 mx-auto max-w-[30rem]">
           <div aria-hidden="true" class="flex justify-center mb-5">
             <span class="verse-ornament"></span>
           </div>
@@ -105,8 +97,8 @@ import spread10 from "../assets/spread-10-planting-tree.png";
 
       <div class="mt-10 sm:mt-14">
         <Image
-          src={spread6}
-          alt="Interior spread: a golden puppy sits alone in a sunlit room, looking out a tall window"
+          src={spread7}
+          alt="Interior spread: a father sits in a kitchen chair with an adult golden retriever resting against his leg, his hand on her head"
           widths={[640, 960, 1280]}
           sizes="(max-width: 640px) 92vw, (max-width: 896px) 86vw, 800px"
           formats={["webp"]}
