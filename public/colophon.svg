@@ -1,22 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-label="The Bedside Books colophon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" role="img" aria-label="The Bedside Books colophon — a lamp on a stack of books">
   <g stroke="#2A2520" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <ellipse cx="250" cy="380" rx="135" ry="245" stroke-width="3"/>
-    <ellipse cx="250" cy="380" rx="120" ry="228" stroke-width="1"/>
-  </g>
-  <g fill="#2A2520">
-    <circle cx="250" cy="135" r="5"/>
-    <circle cx="250" cy="625" r="5"/>
-  </g>
 
-  <g stroke="#2A2520" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="185" y="500" width="130" height="18"/>
-    <rect x="195" y="482" width="110" height="18"/>
-    <rect x="205" y="464" width="90" height="18"/>
-  </g>
+    <!-- Cartouche: outer + inner parallel ovals -->
+    <ellipse cx="250" cy="380" rx="142" ry="252" stroke-width="3"/>
+    <ellipse cx="250" cy="380" rx="126" ry="234" stroke-width="1"/>
 
-  <g stroke="#2A2520" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 200 440 Q 200 415 250 408 Q 300 415 300 440 Q 300 458 250 462 Q 200 458 200 440 Z"/>
-    <rect x="240" y="385" width="20" height="22"/>
+    <!-- Top + bottom small ornamental nodules -->
+    <circle cx="250" cy="128" r="6" fill="#2A2520" stroke="none"/>
+    <circle cx="250" cy="632" r="6" fill="#2A2520" stroke="none"/>
+
+    <!-- Stack of three books at the base.
+         Bottom is widest, top is narrowest. Each gets a tiny spine line. -->
+    <!-- Bottom book -->
+    <rect x="178" y="510" width="144" height="22" stroke-width="2.4"/>
+    <line x1="186" y1="516" x2="186" y2="526" stroke-width="1.2"/>
+    <line x1="194" y1="516" x2="194" y2="526" stroke-width="1"/>
+    <!-- Middle book -->
+    <rect x="192" y="488" width="116" height="22" stroke-width="2.4"/>
+    <line x1="200" y1="494" x2="200" y2="504" stroke-width="1.2"/>
+    <!-- Top book -->
+    <rect x="206" y="466" width="88" height="22" stroke-width="2.4"/>
+    <line x1="214" y1="472" x2="214" y2="482" stroke-width="1.2"/>
+
+    <!-- Lamp.
+         Small ornamental base, vertical stem, conical shade flaring up,
+         crowned with a tiny finial. -->
+
+    <!-- Base: small flattened ornament resting on the top book -->
+    <path d="M 234 462 Q 250 458 266 462 Q 250 470 234 462 Z" fill="#2A2520" stroke="none"/>
+    <ellipse cx="250" cy="452" rx="11" ry="4" stroke-width="2"/>
+
+    <!-- Stem -->
+    <line x1="250" y1="450" x2="250" y2="402" stroke-width="2.4"/>
+
+    <!-- A small bulb/ornament along the stem -->
+    <ellipse cx="250" cy="428" rx="6" ry="5" stroke-width="2" fill="#FAF6EF"/>
+
+    <!-- Shade: trapezoid flaring upward -->
+    <path d="M 224 400 L 276 400 L 296 348 L 204 348 Z" stroke-width="2.4"/>
+
+    <!-- Shade pleat lines (horizontal, suggesting fabric folds) -->
+    <line x1="219" y1="388" x2="281" y2="388" stroke-width="1"/>
+    <line x1="214" y1="376" x2="286" y2="376" stroke-width="1"/>
+    <line x1="209" y1="362" x2="291" y2="362" stroke-width="1"/>
+
+    <!-- Subtle curve to soften the shade's bottom rim -->
+    <path d="M 224 400 Q 250 408 276 400" stroke-width="2"/>
+
+    <!-- Finial on top of the shade -->
+    <line x1="250" y1="348" x2="250" y2="338" stroke-width="2.2"/>
+    <circle cx="250" cy="334" r="3.5" fill="#2A2520" stroke="none"/>
   </g>
-  <path d="M 245 388 Q 250 360 255 388 Q 254 370 250 360 Q 246 370 245 388 Z" fill="#2A2520"/>
 </svg>

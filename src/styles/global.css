@@ -97,6 +97,18 @@
     letter-spacing: var(--tracking-mark);
   }
 
+  /* The full-size wordmark sitting under the colophon in the hero.
+     Real all-caps (not small caps) for presence, with generous tracking
+     so it reads like an engraved publisher's mark rather than a heading. */
+  .wordmark {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    /* Compensate for letter-spacing pushing the visual centre to the right */
+    padding-left: 0.22em;
+    color: var(--color-ink);
+  }
+
   /* Verse: italic, slightly larger than body, tighter leading. The decorative
      ornament above + below comes from spans in the markup. */
   .verse {

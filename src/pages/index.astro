@@ -4,6 +4,7 @@ import Base from "../layouts/Base.astro";
 import SubstackEmbed from "../components/SubstackEmbed.astro";
 
 import cover from "../assets/the-truth-about-the-puppy-cover.png";
+import colophon from "../assets/colophon-mark.png";
 import spread7 from "../assets/spread-7-dad-and-adult-penny.png";
 import spread9 from "../assets/spread-9-dad-and-elder-penny.png";
 import spread10 from "../assets/spread-10-planting-tree.png";
@@ -15,16 +16,22 @@ import spread10 from "../assets/spread-10-planting-tree.png";
 >
   <main>
 
-    <!-- Hero -->
+    <!-- Hero — colophon mark above the wordmark, matching the imprint mark on the book jacket. -->
     <section class="container-prose pt-16 sm:pt-24 text-center">
-      <img
-        src="/logo.svg"
-        alt="The Bedside Books"
-        width="1400"
-        height="280"
-        class="mx-auto w-full max-w-md sm:max-w-lg h-auto"
+      <Image
+        src={colophon}
+        alt=""
+        widths={[180, 280, 420]}
+        sizes="(max-width: 640px) 140px, 180px"
+        formats={["webp"]}
+        quality={90}
+        class="mx-auto h-36 sm:h-44 w-auto"
+        aria-hidden="true"
       />
-      <p class="mt-7 sm:mt-9 text-2xl sm:text-3xl italic leading-snug">
+      <h1 class="mt-5 sm:mt-6 wordmark text-xl sm:text-2xl">
+        The Bedside Books
+      </h1>
+      <p class="mt-8 sm:mt-10 text-2xl sm:text-3xl italic leading-snug">
         Honest books for honest families.
       </p>
     </section>

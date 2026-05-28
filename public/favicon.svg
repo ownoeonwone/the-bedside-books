@@ -1,16 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700">
   <rect width="100%" height="100%" fill="#FAF6EF"/>
   <g stroke="#2A2520" fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <ellipse cx="250" cy="380" rx="135" ry="245" stroke-width="10"/>
+
+    <!-- Outer cartouche only — inner line dropped for legibility at 16px -->
+    <ellipse cx="250" cy="380" rx="142" ry="252" stroke-width="10"/>
+
+    <!-- Stack of books with chunky strokes -->
+    <rect x="178" y="510" width="144" height="24" stroke-width="9"/>
+    <rect x="192" y="486" width="116" height="24" stroke-width="9"/>
+    <rect x="206" y="462" width="88" height="24" stroke-width="9"/>
+
+    <!-- Lamp -->
+    <ellipse cx="250" cy="450" rx="14" ry="6" stroke-width="8"/>
+    <line x1="250" y1="448" x2="250" y2="400" stroke-width="9"/>
+    <path d="M 222 398 L 278 398 L 300 344 L 200 344 Z" stroke-width="9"/>
+    <line x1="250" y1="344" x2="250" y2="332" stroke-width="8"/>
   </g>
-  <g stroke="#2A2520" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="185" y="500" width="130" height="22"/>
-    <rect x="195" y="478" width="110" height="22"/>
-    <rect x="205" y="456" width="90" height="22"/>
-  </g>
-  <g stroke="#2A2520" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M 195 438 Q 195 410 250 402 Q 305 410 305 438 Q 305 458 250 462 Q 195 458 195 438 Z"/>
-    <rect x="238" y="378" width="24" height="24"/>
-  </g>
-  <path d="M 244 382 Q 250 350 256 382 Q 254 360 250 350 Q 246 360 244 382 Z" fill="#2A2520"/>
+  <circle cx="250" cy="328" r="9" fill="#2A2520"/>
 </svg>
