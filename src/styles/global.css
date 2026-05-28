@@ -11,21 +11,38 @@
 
   --tracking-quiet: 0.01em;
   --tracking-mark: 0.18em;
+
+  /* Typographic leading per role */
+  --leading-prose: 1.65;
+  --leading-verse: 1.45;
+  --leading-tight: 1.15;
 }
 
 @layer base {
   html {
     font-family: var(--font-serif);
     color: var(--color-ink);
-    background: var(--color-paper);
+    background-color: var(--color-paper);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
+    /* old-style figures and standard ligatures throughout */
+    font-feature-settings: "kern", "liga", "calt", "onum";
   }
 
   body {
-    background: var(--color-paper);
     color: var(--color-ink);
+    line-height: var(--leading-prose);
+    /* Very faint paper grain. SVG noise turbulence at ~3% opacity — barely
+       perceptible, no extra HTTP request. Renders crisp at any density. */
+    background-color: var(--color-paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch' seed='4'/><feColorMatrix values='0 0 0 0 0.165 0 0 0 0 0.145 0 0 0 0 0.125 0 0 0 0.045 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3 {
+    line-height: var(--leading-tight);
   }
 
   ::selection {
@@ -46,8 +63,16 @@
 }
 
 @layer components {
+  /* Two container widths: prose stays narrow for readable line length,
+     wide allows imagery to occupy more page. Both responsive. */
   .container-prose {
-    max-width: 40rem;
+    max-width: 40rem;        /* ~640px */
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .container-wide {
+    max-width: 56rem;        /* ~896px */
     margin-inline: auto;
     padding-inline: 1.5rem;
   }
@@ -65,10 +90,41 @@
     color: color-mix(in srgb, var(--color-ink) 70%, transparent);
   }
 
-  .pullquote {
+  /* Small caps used for the imprint name in the footer and OG-style elements.
+     EB Garamond ships with proper small caps via OpenType. */
+  .smallcaps {
+    font-variant-caps: all-small-caps;
+    letter-spacing: var(--tracking-mark);
+  }
+
+  /* Verse: italic, slightly larger than body, tighter leading. The decorative
+     ornament above + below comes from spans in the markup. */
+  .verse {
     font-style: italic;
-    line-height: 1.45;
+    font-size: 1.15em;
+    line-height: var(--leading-verse);
     color: color-mix(in srgb, var(--color-ink) 88%, transparent);
+  }
+
+  .verse-ornament {
+    display: inline-block;
+    width: 3.75rem;
+    height: 1px;
+    background: color-mix(in srgb, var(--color-ink) 30%, transparent);
+    vertical-align: middle;
+  }
+
+  .imprint-statement {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--color-ink) 88%, transparent);
+    max-width: 38rem;
+    margin-inline: auto;
+  }
+  @media (min-width: 640px) {
+    .imprint-statement {
+      font-size: 1.35rem;
+    }
   }
 
   .signup-form {
@@ -132,10 +188,19 @@
     box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-sage) 30%, transparent);
   }
 
+  /* Strong "object on the page" shadow for the cover and interior spreads.
+     Tuned to feel like printed paper resting on a sheet, not a UI card. */
   .cover-shadow {
     box-shadow:
-      0 1px 1px rgba(42, 37, 32, 0.04),
-      0 6px 12px rgba(42, 37, 32, 0.10),
-      0 24px 40px -12px rgba(42, 37, 32, 0.14);
+      0 2px 4px rgba(42, 37, 32, 0.05),
+      0 8px 16px rgba(42, 37, 32, 0.06),
+      0 20px 40px rgba(42, 37, 32, 0.10);
+  }
+
+  .spread-shadow {
+    box-shadow:
+      0 1px 2px rgba(42, 37, 32, 0.04),
+      0 6px 14px rgba(42, 37, 32, 0.06),
+      0 16px 28px -8px rgba(42, 37, 32, 0.08);
   }
 }
